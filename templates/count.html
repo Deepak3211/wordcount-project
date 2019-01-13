@@ -1,0 +1,22 @@
+<html>
+<head>
+<style>   
+</style>    
+</head>    
+<body bgcolor="#00BFFF">
+<a style= "float:right"; href="{% url 'homepage' %}"><button style="width: 150px; height: 50px; color:#F08080;background-color: #00FFFF;text-align:center"><h3 style="text-align:center">Start Again</h3></button></a>
+<h1>There are {{ count }} words in your text</h1>    
+<h1>Your Text:</h1>
+{{ fulltext }}
+
+<h1>Word Count:</h1>
+{% for word,count_total in sorted_words %}
+{{ word }} -- {{ count_total }}
+<br/>
+
+
+{% endfor %}
+
+</body>    
+</html>    
+    
